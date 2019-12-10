@@ -12,7 +12,7 @@ class Users(db.Model):
         return{
             'name': self.name
         }
-        
+
 class Tasks(db.Model):
     __tablename__ = 'tasks'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -22,8 +22,8 @@ class Tasks(db.Model):
 
     def to_json(self):
         return{
-            'user_id' = self.user_id,
-            'description' = self.description,
-            'status' = self.status,
-            'user_id' = self.user_id
+            'user_id': self.user_id,
+            'description': self.description,
+            'status': self.status,
+            'user_id': self.user_id
         }
