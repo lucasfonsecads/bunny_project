@@ -5,7 +5,7 @@ from sqlalchemy.orm import relationship
 class Users(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(124))
+    name = db.Column(db.String(124), unique=True)
     tasks = relationship("Tasks")
 
     def to_json(self):
